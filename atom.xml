@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-06T02:31:37.000Z</updated>
+  <updated>2017-07-08T04:13:44.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用网址</title>
+    <link href="http://yoursite.com/2017/07/08/%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80/"/>
+    <id>http://yoursite.com/2017/07/08/常用网址/</id>
+    <published>2017-07-08T04:11:02.000Z</published>
+    <updated>2017-07-08T04:13:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vim-常用网址"><a href="#vim-常用网址" class="headerlink" title="vim 常用网址"></a>vim 常用网址</h2><p><a href="http://vimawesome.com" target="_blank" rel="external">VimAwesome</a></p>
+<pre><code>很方便查找各种vim常用插件
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;vim-常用网址&quot;&gt;&lt;a href=&quot;#vim-常用网址&quot; class=&quot;headerlink&quot; title=&quot;vim 常用网址&quot;&gt;&lt;/a&gt;vim 常用网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://vimawesome.com&quot; target=&quot;_blank
+    
+    </summary>
+    
+    
+      <category term="常用网址统计" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>html5_study</title>
