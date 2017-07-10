@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="json," />
 
 
 
@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="新写一篇blog:hexo new post &amp;quot;article-tile&amp;quot; 这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md 生成hexo g 部署hexo d  上面的两个命令可以组合成一个   ​    还可以使用组合命令：hexo g -d  以上内容是生成和发布博客的一般流程，下面我记录一下我的github">
-<meta name="keywords" content="hexo">
+<meta name="description" content="问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？  ​     1234567891011答：	Person person = new  Person();		person.setUserName(&amp;quot;盛艳明&amp;quot;);		person.setAge(27);		//将javabean转为map		Map map = JSON.toJSON(per">
+<meta name="keywords" content="json">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo常用命令总结">
-<meta property="og:url" content="http://yoursite.com/2017/07/01/article-title/index.html">
+<meta property="og:title" content="fastJson将javabean转为Map">
+<meta property="og:url" content="http://yoursite.com/2017/07/10/json/index.html">
 <meta property="og:site_name" content="盛艳明的博客">
-<meta property="og:description" content="新写一篇blog:hexo new post &amp;quot;article-tile&amp;quot; 这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md 生成hexo g 部署hexo d  上面的两个命令可以组合成一个   ​    还可以使用组合命令：hexo g -d  以上内容是生成和发布博客的一般流程，下面我记录一下我的github">
-<meta property="og:updated_time" content="2017-07-01T02:44:01.000Z">
+<meta property="og:description" content="问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？  ​     1234567891011答：	Person person = new  Person();		person.setUserName(&amp;quot;盛艳明&amp;quot;);		person.setAge(27);		//将javabean转为map		Map map = JSON.toJSON(per">
+<meta property="og:updated_time" content="2017-07-10T11:00:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo常用命令总结">
-<meta name="twitter:description" content="新写一篇blog:hexo new post &amp;quot;article-tile&amp;quot; 这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md 生成hexo g 部署hexo d  上面的两个命令可以组合成一个   ​    还可以使用组合命令：hexo g -d  以上内容是生成和发布博客的一般流程，下面我记录一下我的github">
+<meta name="twitter:title" content="fastJson将javabean转为Map">
+<meta name="twitter:description" content="问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？  ​     1234567891011答：	Person person = new  Person();		person.setUserName(&amp;quot;盛艳明&amp;quot;);		person.setAge(27);		//将javabean转为map		Map map = JSON.toJSON(per">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/01/article-title/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/10/json/"/>
 
 
 
 
 
-  <title>Hexo常用命令总结 | 盛艳明的博客</title>
+  <title>fastJson将javabean转为Map | 盛艳明的博客</title>
   
 
 
@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/01/article-title/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/10/json/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="盛艳明">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo常用命令总结</h1>
+          <h1 class="post-title" itemprop="name headline">fastJson将javabean转为Map</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T09:43:15+08:00">
-                2017-07-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-10T18:53:28+08:00">
+                2017-07-10
               </time>
             
 
@@ -322,52 +322,11 @@
       
 
       
-        <h3 id="新写一篇blog"><a href="#新写一篇blog" class="headerlink" title="新写一篇blog:"></a>新写一篇blog:</h3><pre><code>hexo new post &quot;article-tile&quot;
-这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md
-</code></pre><h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><pre><code>hexo g
-</code></pre><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><pre><code>hexo d
-</code></pre><blockquote>
-<p>上面的两个命令可以组合成一个 </p>
+        <blockquote>
+<p>问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？</p>
 </blockquote>
-<p>​    还可以使用组合命令：hexo g -d</p>
-<hr>
-<p>以上内容是生成和发布博客的一般流程，下面我记录一下我的github + hexo搭建流程供有需要的人参考和学习</p>
-<ul>
-<li><p>申请github</p>
-<ul>
-<li>这个就不多说了</li>
-<li>建立github.io 这个自己可以百度一下教程</li>
-</ul>
-</li>
-<li><p>搭建hexo</p>
-<ul>
-<li><a href="https://hexo.io/docs/" target="_blank" rel="external">!官网</a> :有详细的使用说明，本教程就是说明一下其中常用的</li>
-<li>安装Node.js<ul>
-<li><code>$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash</code></li>
-<li>nvm install stable</li>
-</ul>
-</li>
-<li>安装hexo<ul>
-<li>npm install -g hexo-cli</li>
-<li>hexo init <folder></folder></li>
-<li>cd <folder></folder></li>
-<li>npm install</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>安装主题</p>
-<ul>
-<li><p><strong>Yilia</strong></p>
-</li>
-<li><p><a href="http://theme-next.iissnan.com" target="_blank" rel="external"><strong>NexT</strong></a></p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些都有相关的教程可以去github上搜索，然后看教程配置使用</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">答：	Person person = new  Person();</div><div class="line"></div><div class="line">		person.setUserName(&quot;盛艳明&quot;);</div><div class="line"></div><div class="line">		person.setAge(27);</div><div class="line"></div><div class="line">		//将javabean转为map</div><div class="line"></div><div class="line">		Map map = JSON.toJSON(person);</div><div class="line"></div><div class="line">		System.out.println(map.toString());</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -397,7 +356,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/json/" rel="tag"># json</a>
           
         </div>
       
@@ -410,15 +369,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/07/08/常用网址/" rel="next" title="常用网址">
+                <i class="fa fa-chevron-left"></i> 常用网址
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/01/learn-git/" rel="prev" title="learn_git">
-                learn_git <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -465,17 +424,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/8554586?v=3&u=b3cd0e63e7981b15dc2ec26879b5554e7d6af83c&s=400"
@@ -535,22 +485,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#新写一篇blog"><span class="nav-number">1.</span> <span class="nav-text">新写一篇blog:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成"><span class="nav-number">2.</span> <span class="nav-text">生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">3.</span> <span class="nav-text">部署</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
