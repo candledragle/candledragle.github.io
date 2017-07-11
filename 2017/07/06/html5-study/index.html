@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="盛艳明的博客">
 <meta property="og:description" content="HTML 5 全局 contenteditable 属性  为了写一个富文本编辑器上个周末和这个周一真的很累，本来想着用一个开源大神写的richEdit来实现发现还是有很多局限性的，richedit 就是使用了html 5的一个global 属性contenteditable属性让div具有了可编辑内容的效果，但是如果我想在div中添加一个图片，图片点击后右上角会出现一个删除按钮这样稍微复杂一些的">
 <meta property="og:image" content="http://yoursite.com/2017/07/06/html5-study/html5_01.jpg">
-<meta property="og:updated_time" content="2017-07-11T00:00:48.000Z">
+<meta property="og:updated_time" content="2017-07-11T11:07:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5_study">
 <meta name="twitter:description" content="HTML 5 全局 contenteditable 属性  为了写一个富文本编辑器上个周末和这个周一真的很累，本来想着用一个开源大神写的richEdit来实现发现还是有很多局限性的，richedit 就是使用了html 5的一个global 属性contenteditable属性让div具有了可编辑内容的效果，但是如果我想在div中添加一个图片，图片点击后右上角会出现一个删除按钮这样稍微复杂一些的">
@@ -326,6 +326,10 @@
         <p><a href="http://www.w3school.com.cn/html5/att_global_contenteditable.asp" target="_blank" rel="external">HTML 5 全局 contenteditable 属性</a></p>
 <p><img src="/2017/07/06/html5-study/html5_01.jpg" alt="说明图片"></p>
 <p>为了写一个富文本编辑器上个周末和这个周一真的很累，本来想着用一个开源大神写的richEdit来实现发现还是有很多局限性的，richedit 就是使用了html 5的一个global 属性contenteditable属性让div具有了可编辑内容的效果，但是如果我想在div中添加一个图片，图片点击后右上角会出现一个删除按钮这样稍微复杂一些的操作就不行了，因为这个属性是让div里面包含的所有的子元素都可以编辑。</p>
+<h2 id="我认为的知识点"><a href="#我认为的知识点" class="headerlink" title="我认为的知识点"></a>我认为的知识点</h2><ol>
+<li>html dom tagName 属性</li>
+</ol>
+<p>​        定义和用法<br>      tagName 属性返回元素的标签名。<br>        在 HTML 中，tagName 属性的返回值始终是<strong>大写</strong>的。</p>
 
       
     </div>
@@ -421,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/8554586?v=3&u=b3cd0e63e7981b15dc2ec26879b5554e7d6af83c&s=400"
@@ -482,6 +495,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我认为的知识点"><span class="nav-number">1.</span> <span class="nav-text">我认为的知识点</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
