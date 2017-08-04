@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-10T11:00:45.000Z</updated>
+  <updated>2017-08-04T07:43:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pythonStudy</title>
+    <link href="http://yoursite.com/2017/08/04/pythonStudy/"/>
+    <id>http://yoursite.com/2017/08/04/pythonStudy/</id>
+    <published>2017-08-04T07:38:43.000Z</published>
+    <updated>2017-08-04T07:43:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Python-中from…-import-与-import…-as的区别"><a href="#Python-中from…-import-与-import…-as的区别" class="headerlink" title="Python 中from… import 与 import…. as的区别"></a>Python 中from… import 与 import…. as的区别</h3><blockquote>
+<p>from… import</p>
+</blockquote>
+<p>​    如 from A import b,相当于</p>
+<p>​    import A</p>
+<p>​    b = A.b</p>
+<p>​    再如：</p>
+<p>​    “from t2 import var1” 相当于：</p>
+<p>​    import t2</p>
+<p>​    var1 = t2.var1</p>
+<p>​    在此过程中有一个隐含的赋值的过程</p>
+<p>​    import… as</p>
+<p>​    import A as B，给予A库一个B的别称，帮助记忆。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Python-中from…-import-与-import…-as的区别&quot;&gt;&lt;a href=&quot;#Python-中from…-import-与-import…-as的区别&quot; class=&quot;headerlink&quot; title=&quot;Python 中from… import
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>fastJson将javabean转为Map</title>
