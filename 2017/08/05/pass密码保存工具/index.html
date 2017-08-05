@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="pass、密码," />
 
 
 
@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="git 仓库中添加子仓库    git submodule add &amp;lt;子module的远程仓库地址&amp;gt;   git 删除子仓库   Delete the relevant section from the .gitmodules file.  Stage the .gitmodules changes git add .gitmodules.  Delete the relevant">
-<meta name="keywords" content="git">
+<meta name="description" content="安装  1mac 系统：brew install pass  生成GPG密匙对   12gpg --gen-key注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可  初始化密码存储   1pass init s_abcabc@126.com  查看密码目录树   12345pass或pass ls或pass show  插入一个新">
+<meta name="keywords" content="pass、密码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitsubnodule的使用">
-<meta property="og:url" content="http://yoursite.com/2017/07/02/gitsubnodule的使用/index.html">
+<meta property="og:title" content="pass密码保存工具">
+<meta property="og:url" content="http://yoursite.com/2017/08/05/pass密码保存工具/index.html">
 <meta property="og:site_name" content="盛艳明的博客">
-<meta property="og:description" content="git 仓库中添加子仓库    git submodule add &amp;lt;子module的远程仓库地址&amp;gt;   git 删除子仓库   Delete the relevant section from the .gitmodules file.  Stage the .gitmodules changes git add .gitmodules.  Delete the relevant">
-<meta property="og:updated_time" content="2017-07-02T09:37:48.000Z">
+<meta property="og:description" content="安装  1mac 系统：brew install pass  生成GPG密匙对   12gpg --gen-key注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可  初始化密码存储   1pass init s_abcabc@126.com  查看密码目录树   12345pass或pass ls或pass show  插入一个新">
+<meta property="og:updated_time" content="2017-08-05T04:00:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitsubnodule的使用">
-<meta name="twitter:description" content="git 仓库中添加子仓库    git submodule add &amp;lt;子module的远程仓库地址&amp;gt;   git 删除子仓库   Delete the relevant section from the .gitmodules file.  Stage the .gitmodules changes git add .gitmodules.  Delete the relevant">
+<meta name="twitter:title" content="pass密码保存工具">
+<meta name="twitter:description" content="安装  1mac 系统：brew install pass  生成GPG密匙对   12gpg --gen-key注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可  初始化密码存储   1pass init s_abcabc@126.com  查看密码目录树   12345pass或pass ls或pass show  插入一个新">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/02/gitsubnodule的使用/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/05/pass密码保存工具/"/>
 
 
 
 
 
-  <title>gitsubnodule的使用 | 盛艳明的博客</title>
+  <title>pass密码保存工具 | 盛艳明的博客</title>
   
 
 
@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/02/gitsubnodule的使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/05/pass密码保存工具/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="盛艳明">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">gitsubnodule的使用</h1>
+          <h1 class="post-title" itemprop="name headline">pass密码保存工具</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T17:28:36+08:00">
-                2017-07-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T11:26:38+08:00">
+                2017-08-05
               </time>
             
 
@@ -323,29 +323,29 @@
 
       
         <blockquote>
-<p>git 仓库中添加子仓库 </p>
+<p>安装</p>
 </blockquote>
-<ul>
-<li>git submodule add &lt;子module的远程仓库地址&gt;</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mac 系统：brew install pass</div></pre></td></tr></table></figure>
 <blockquote>
-<p>git 删除子仓库</p>
+<p>生成GPG密匙对 </p>
 </blockquote>
-<ul>
-<li><p>Delete the relevant section from the .gitmodules file.</p>
-</li>
-<li><p>Stage the .gitmodules changes git add .gitmodules.</p>
-</li>
-<li><p>Delete the relevant section from .git/config .</p>
-</li>
-<li><p>Run git rm –cached path_to_submodule (no trailing slash).</p>
-</li>
-<li><p>Run rm -rf .git/modules/path_to_submodule.</p>
-<hr>
-<h2 id="问题记录："><a href="#问题记录：" class="headerlink" title="问题记录："></a>问题记录：</h2><p>问题一： 重新add子module的时候提示： ‘repo’ already exists in the index</p>
-<p>解决办法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ rm -Rf rack/</div><div class="line"></div><div class="line">$ git submodule add git@github.com:schacon/rack.git rack&apos;rack&apos; already exists in the index</div><div class="line"></div><div class="line">You have to unstage the rack directory first. Then you can add the submodule:</div><div class="line"></div><div class="line">$ git rm -r rack</div><div class="line"></div><div class="line">$ git submodule add git@github.com:schacon/rack.git rack</div></pre></td></tr></table></figure></li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gpg --gen-key</div><div class="line">注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可</div></pre></td></tr></table></figure>
+<blockquote>
+<p>初始化密码存储 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pass init s_abcabc@126.com</div></pre></td></tr></table></figure>
+<blockquote>
+<p>查看密码目录树 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass</div><div class="line">或</div><div class="line">pass ls</div><div class="line">或</div><div class="line">pass show</div></pre></td></tr></table></figure>
+<blockquote>
+<p>插入一个新密码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pass insert &lt;密码路径&gt;</div><div class="line">例子：保存邮箱密码</div><div class="line">pass insert eMail/s_abcabc@126.com</div></pre></td></tr></table></figure>
+<blockquote>
+<p>显示已有密码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass show &lt;密码路径&gt;</div><div class="line">例子：</div><div class="line">pass show eMail/s_abcabc@126.com</div><div class="line">会弹出一个对话框让你输入pass的密码</div><div class="line">输入完成后将会在终端显示s_abcabc@126.com邮箱的密码</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -375,7 +375,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/pass、密码/" rel="tag"># pass、密码</a>
           
         </div>
       
@@ -388,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/01/learn-git/" rel="next" title="learn_git">
-                <i class="fa fa-chevron-left"></i> learn_git
+              <a href="/2017/08/04/pythonStudy/" rel="next" title="pythonStudy">
+                <i class="fa fa-chevron-left"></i> pythonStudy
               </a>
             
           </div>
@@ -397,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/06/html5-study/" rel="prev" title="html5_study">
-                html5_study <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -447,17 +443,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/8554586?v=3&u=b3cd0e63e7981b15dc2ec26879b5554e7d6af83c&s=400"
@@ -517,22 +504,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题记录："><span class="nav-number">1.</span> <span class="nav-text">问题记录：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
