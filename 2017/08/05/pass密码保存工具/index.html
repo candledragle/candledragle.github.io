@@ -104,7 +104,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/05/pass密码保存工具/index.html">
 <meta property="og:site_name" content="盛艳明的博客">
 <meta property="og:description" content="安装  1mac 系统：brew install pass  生成GPG密匙对   12gpg --gen-key注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可  初始化密码存储   1pass init s_abcabc@126.com  查看密码目录树   12345pass或pass ls或pass show  插入一个新">
-<meta property="og:updated_time" content="2017-08-05T04:00:51.000Z">
+<meta property="og:updated_time" content="2017-08-06T13:49:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pass密码保存工具">
 <meta name="twitter:description" content="安装  1mac 系统：brew install pass  生成GPG密匙对   12gpg --gen-key注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可  初始化密码存储   1pass init s_abcabc@126.com  查看密码目录树   12345pass或pass ls或pass show  插入一个新">
@@ -353,6 +353,14 @@
 <p>显示已有密码</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass show &lt;密码路径&gt;</div><div class="line">例子：</div><div class="line">pass show eMail/s_abcabc@126.com</div><div class="line">会弹出一个对话框让你输入pass的密码</div><div class="line">输入完成后将会在终端显示s_abcabc@126.com邮箱的密码</div></pre></td></tr></table></figure>
+<blockquote>
+<p>生成密码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Generate new password</div><div class="line">      zx2c4@laptop ~ $ pass generate Email/jasondonenfeld.com 15</div><div class="line">      The generated password to Email/jasondonenfeld.com is:</div><div class="line">      $(-QF&amp;Q=IN2nFBx</div></pre></td></tr></table></figure>
+<blockquote>
+<p>copy密码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Copy existing password to clipboard</div><div class="line">    zx2c4@laptop ~ $ pass -c Email/zx2c4.com</div><div class="line">    Copied Email/jason@zx2c4.com to clipboard. Will clear in 45 sec-</div><div class="line">    onds.</div></pre></td></tr></table></figure>
 
       
     </div>
