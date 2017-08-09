@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-09T03:03:11.000Z</updated>
+  <updated>2017-08-09T08:42:15.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python 类库引入机制</title>
+    <link href="http://yoursite.com/2017/08/09/python-import/"/>
+    <id>http://yoursite.com/2017/08/09/python-import/</id>
+    <published>2017-08-09T06:48:59.000Z</published>
+    <updated>2017-08-09T08:42:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Python 的两种引入机制</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. relative import</div><div class="line">2. absolute import</div></pre></td></tr></table></figure>
+<ol>
+<li><p>relative import</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">relative import 也叫作相对引入，在python2.5及以前是默认的引入方法。</div><div class="line">from .string import a</div><div class="line">from ..string import a</div><div class="line">from ...string import a</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Python 的两种引入机制&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>找房爬虫</title>
+    <link href="http://yoursite.com/2017/08/09/%E6%89%BE%E6%88%BF%E7%88%AC%E8%99%AB/"/>
+    <id>http://yoursite.com/2017/08/09/找房爬虫/</id>
+    <published>2017-08-09T04:18:25.000Z</published>
+    <updated>2017-08-09T04:25:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>scrapy 库介绍</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scrapy 是一个为了爬取网站数据，提取结构性数据而编写的应用框架</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;scrapy 库介绍&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/p
+    
+    </summary>
+    
+    
+      <category term="python,爬虫" scheme="http://yoursite.com/tags/python-%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>mac 下给pip换源</title>
@@ -108,7 +168,7 @@
     <link href="http://yoursite.com/2017/08/04/pythonStudy/"/>
     <id>http://yoursite.com/2017/08/04/pythonStudy/</id>
     <published>2017-08-04T07:38:43.000Z</published>
-    <updated>2017-08-04T07:43:35.000Z</updated>
+    <updated>2017-08-09T08:42:06.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Python-中from…-import-与-import…-as的区别"><a href="#Python-中from…-import-与-import…-as的区别" class="headerlink" title="Python 中from… import 与 import…. as的区别"></a>Python 中from… import 与 import…. as的区别</h3><blockquote>
 <p>from… import</p>
@@ -123,6 +183,8 @@
 <p>​    在此过程中有一个隐含的赋值的过程</p>
 <p>​    import… as</p>
 <p>​    import A as B，给予A库一个B的别称，帮助记忆。</p>
+<blockquote>
+<h3 id="pyCharm-当中使用VirtualEnv"><a href="#pyCharm-当中使用VirtualEnv" class="headerlink" title="pyCharm 当中使用VirtualEnv"></a><a href="http://blog.csdn.net/u012104256/article/details/53471836" target="_blank" rel="external">pyCharm 当中使用VirtualEnv</a></h3></blockquote>
 ]]></content>
     
     <summary type="html">
