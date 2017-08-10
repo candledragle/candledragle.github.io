@@ -1,371 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[python之pyc文件]]></title>
-      <url>/2017/08/10/python%E4%B9%8Bpyc%E6%96%87%E4%BB%B6/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>简述Python的运行过程</p>
-<p>​    在说这个问题之前，先了解两个概念，PyCodeObject和pyc文件。我们在硬盘上看到的pyc是PyCodeObject序列化后的文件。当python程序运行时，编译的结果则是保存在位于内存中的PyCodeObject中，当Python程序运行结束时，Python解释器将PyCodeObject写回到pyc文件中。当python程序第二次运行的时候，首先程序会在硬盘中寻找pyc文件，如果找到，则直接载入，否则就重复上面的过程。所以我们应该这样定位PyCodeObject和pyc文件，pyc文件其实是PyCodeObject的一种持久化保存方式。</p>
-</blockquote>
-<ul>
-<li>pyc的目的是重用</li>
-</ul>
-<blockquote>
-<p>pyc的过期时间</p>
-<p>每次pyc载入内存中之前会先检查一下py文件和pyc文件保存的最后修改日期，如果不一致则重新生成一份pyc文件</p>
-</blockquote>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[python编程命名规范]]></title>
-      <url>/2017/08/10/python%E7%BC%96%E7%A8%8B%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</url>
-      <content type="html"><![CDATA[<ol>
-<li><p>项目名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">首字母大写，其余小写单词，若多个单词组合可以添加“_” 下划线增加可读性</div><div class="line">Ui_test</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>包名、模块名</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">全部小写字母</div><div class="line">package、module</div></pre></td></tr></table></figure>
-<p> ​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  首字母大写，其它字母小写，若多个单词时，使用驼峰命名法，UserLogin</div><div class="line">class Login:</div><div class="line">​</div></pre></td></tr></table></figure></p>
-</li>
-</ol>
-<ol>
-<li><p>方法名</p>
-<p>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">小写单词，多个单词时，用下划线分割单词以增加可读性</div><div class="line">def user_login()</div><div class="line">​</div></pre></td></tr></table></figure></p>
-</li>
-</ol>
-<ol>
-<li><p>参数名</p>
-<p>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">小写单词</div><div class="line">def user_login(self)</div><div class="line">如果函数的参数名与保留关键字冲突，在参数名前面加一个下划线，比用缩写、错误的拼写要好</div><div class="line">因此&quot;_print&quot; 比”&quot;prnt&quot;好</div><div class="line">​</div></pre></td></tr></table></figure></p>
-</li>
-</ol>
-<ol>
-<li><p>普通变量名</p>
-<p>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">小写字母，单词之间用_分割或者遵守驼峰原则命名</div><div class="line">month_pay = 2000</div><div class="line">monthPay = 2000</div><div class="line"></div><div class="line">注意：</div><div class="line">1. 不论是类成员变量还是全局变量，均不是用m 或 g 前缀</div><div class="line">2. 私有类成员变量使用单一下划线前缀标识，多定义公开成员，少定义私有成员</div><div class="line">3. 变量名不应该带有类型信息，因为Python是动态类型语言。如iValue、names_list、dict_obj等都是不好的命名</div><div class="line">4. 开头，结尾，一般为python的自由变量，不要以这种方式命名</div><div class="line">5. 以__开头(2个下划线)，是私有实例变量</div><div class="line">​</div></pre></td></tr></table></figure></p>
-</li>
-</ol>
-<pre><code>7. 常量
-
-​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">常量定义全部为大写，必要的时可用下划线分割单词以增加可读性</div><div class="line">​</div></pre></td></tr></table></figure>
-</code></pre>]]></content>
-      
-        
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[python 类库引入机制]]></title>
-      <url>/2017/08/09/python-import/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>Python 的两种引入机制</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. relative import</div><div class="line">2. absolute import</div></pre></td></tr></table></figure>
-<ol>
-<li><p>relative import</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">relative import 也叫作相对引入，在python2.5及以前是默认的引入方法。</div><div class="line">from .string import a</div><div class="line">from ..string import a</div><div class="line">from ...string import a</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[找房爬虫]]></title>
-      <url>/2017/08/09/%E6%89%BE%E6%88%BF%E7%88%AC%E8%99%AB/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>scrapy 库介绍</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scrapy 是一个为了爬取网站数据，提取结构性数据而编写的应用框架</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> python,爬虫 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[mac 下给pip换源]]></title>
-      <url>/2017/08/09/%E7%BB%99pip%E6%8D%A2%E6%BA%90/</url>
-      <content type="html"><![CDATA[<ol>
-<li>在终端进入目录：cd ~/</li>
-<li>如果没有 .pip 文件夹，那么就新建这个文件夹，mkdir .pip</li>
-<li>然后在 .pip 文件夹内新建一个文件 touch pip.conf</li>
-<li>编辑pip.conf 文件，写入第三方源</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">阿里云：</div><div class="line">	[global]</div><div class="line"></div><div class="line">	index-url = http:<span class="comment">//mirrors.aliyun.com/pypi/simple/</span></div><div class="line"></div><div class="line">	[install]</div><div class="line"></div><div class="line">	trusted-host=mirrors.aliyun.com</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">豆瓣：</div><div class="line">	[global]</div><div class="line"></div><div class="line">	index-url = http:<span class="comment">//pypi.douban.com/simple</span></div><div class="line"></div><div class="line">	[install]</div><div class="line"></div><div class="line">	trusted-host=pypi.douban.com</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">清华：</div><div class="line"></div><div class="line">	[global]</div><div class="line"> 	index-url = https:<span class="comment">//pypi.tuna.tsinghua.edu.cn/simple</span></div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> pip,mac </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[pass密码保存工具]]></title>
-      <url>/2017/08/05/pass%E5%AF%86%E7%A0%81%E4%BF%9D%E5%AD%98%E5%B7%A5%E5%85%B7/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>安装</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mac 系统：brew install pass</div></pre></td></tr></table></figure>
-<blockquote>
-<p>生成GPG密匙对 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gpg --gen-key</div><div class="line">注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可</div></pre></td></tr></table></figure>
-<blockquote>
-<p>初始化密码存储 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pass init s_abcabc@126.com</div></pre></td></tr></table></figure>
-<blockquote>
-<p>查看密码目录树 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass</div><div class="line">或</div><div class="line">pass ls</div><div class="line">或</div><div class="line">pass show</div></pre></td></tr></table></figure>
-<blockquote>
-<p>插入一个新密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pass insert &lt;密码路径&gt;</div><div class="line">例子：保存邮箱密码</div><div class="line">pass insert eMail/s_abcabc@126.com</div></pre></td></tr></table></figure>
-<blockquote>
-<p>显示已有密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass show &lt;密码路径&gt;</div><div class="line">例子：</div><div class="line">pass show eMail/s_abcabc@126.com</div><div class="line">会弹出一个对话框让你输入pass的密码</div><div class="line">输入完成后将会在终端显示s_abcabc@126.com邮箱的密码</div></pre></td></tr></table></figure>
-<blockquote>
-<p>生成密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Generate new password</div><div class="line">      zx2c4@laptop ~ $ pass generate Email/jasondonenfeld.com 15</div><div class="line">      The generated password to Email/jasondonenfeld.com is:</div><div class="line">      $(-QF&amp;Q=IN2nFBx</div></pre></td></tr></table></figure>
-<blockquote>
-<p>copy密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Copy existing password to clipboard</div><div class="line">    zx2c4@laptop ~ $ pass -c Email/zx2c4.com</div><div class="line">    Copied Email/jason@zx2c4.com to clipboard. Will clear in 45 sec-</div><div class="line">    onds.</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> pass、密码 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[pythonStudy]]></title>
-      <url>/2017/08/04/pythonStudy/</url>
-      <content type="html"><![CDATA[<h3 id="Python-中from…-import-与-import…-as的区别"><a href="#Python-中from…-import-与-import…-as的区别" class="headerlink" title="Python 中from… import 与 import…. as的区别"></a>Python 中from… import 与 import…. as的区别</h3><blockquote>
-<p>from… import</p>
-</blockquote>
-<p>​    如 from A import b,相当于</p>
-<p>​    import A</p>
-<p>​    b = A.b</p>
-<p>​    再如：</p>
-<p>​    “from t2 import var1” 相当于：</p>
-<p>​    import t2</p>
-<p>​    var1 = t2.var1</p>
-<p>​    在此过程中有一个隐含的赋值的过程</p>
-<p>​    import… as</p>
-<p>​    import A as B，给予A库一个B的别称，帮助记忆。</p>
-<blockquote>
-<h3 id="pyCharm-当中使用VirtualEnv"><a href="#pyCharm-当中使用VirtualEnv" class="headerlink" title="pyCharm 当中使用VirtualEnv"></a><a href="http://blog.csdn.net/u012104256/article/details/53471836" target="_blank" rel="external">pyCharm 当中使用VirtualEnv</a></h3></blockquote>
-<hr>
-<blockquote>
-<p>python 类</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">type() :判断对象的类型</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[fastJson将javabean转为Map]]></title>
-      <url>/2017/07/10/json/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？</p>
-</blockquote>
-<p>​    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">答：	Person person = new  Person();</div><div class="line"></div><div class="line">		person.setUserName(&quot;盛艳明&quot;);</div><div class="line"></div><div class="line">		person.setAge(27);</div><div class="line"></div><div class="line">		//将javabean转为map</div><div class="line"></div><div class="line">		Map map = JSON.toJSON(person);</div><div class="line"></div><div class="line">		System.out.println(map.toString());</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> json </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[常用网址]]></title>
-      <url>/2017/07/08/%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80/</url>
-      <content type="html"><![CDATA[<h2 id="vim-常用网址"><a href="#vim-常用网址" class="headerlink" title="vim 常用网址"></a>vim 常用网址</h2><p><a href="http://vimawesome.com" target="_blank" rel="external">VimAwesome</a></p>
-<pre><code>很方便查找各种vim常用插件
-</code></pre>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 常用网址统计 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[html5_study]]></title>
-      <url>/2017/07/06/html5-study/</url>
-      <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/html5/att_global_contenteditable.asp" target="_blank" rel="external">HTML 5 全局 contenteditable 属性</a></p>
-<p><img src="/2017/07/06/html5-study/html5_01.jpg" alt="说明图片"></p>
-<p>为了写一个富文本编辑器上个周末和这个周一真的很累，本来想着用一个开源大神写的richEdit来实现发现还是有很多局限性的，richedit 就是使用了html 5的一个global 属性contenteditable属性让div具有了可编辑内容的效果，但是如果我想在div中添加一个图片，图片点击后右上角会出现一个删除按钮这样稍微复杂一些的操作就不行了，因为这个属性是让div里面包含的所有的子元素都可以编辑。</p>
-<h2 id="我认为的知识点"><a href="#我认为的知识点" class="headerlink" title="我认为的知识点"></a>我认为的知识点</h2><ol>
-<li>html dom tagName 属性</li>
-</ol>
-<p>​        定义和用法<br>      tagName 属性返回元素的标签名。<br>        在 HTML 中，tagName 属性的返回值始终是<strong>大写</strong>的。</p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[gitsubnodule的使用]]></title>
-      <url>/2017/07/02/gitsubnodule%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>git 仓库中添加子仓库 </p>
-</blockquote>
-<ul>
-<li>git submodule add &lt;子module的远程仓库地址&gt;</li>
-</ul>
-<blockquote>
-<p>git 删除子仓库</p>
-</blockquote>
-<ul>
-<li><p>Delete the relevant section from the .gitmodules file.</p>
-</li>
-<li><p>Stage the .gitmodules changes git add .gitmodules.</p>
-</li>
-<li><p>Delete the relevant section from .git/config .</p>
-</li>
-<li><p>Run git rm –cached path_to_submodule (no trailing slash).</p>
-</li>
-<li><p>Run rm -rf .git/modules/path_to_submodule.</p>
-<hr>
-<h2 id="问题记录："><a href="#问题记录：" class="headerlink" title="问题记录："></a>问题记录：</h2><p>问题一： 重新add子module的时候提示： ‘repo’ already exists in the index</p>
-<p>解决办法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ rm -Rf rack/</div><div class="line"></div><div class="line">$ git submodule add git@github.com:schacon/rack.git rack&apos;rack&apos; already exists in the index</div><div class="line"></div><div class="line">You have to unstage the rack directory first. Then you can add the submodule:</div><div class="line"></div><div class="line">$ git rm -r rack</div><div class="line"></div><div class="line">$ git submodule add git@github.com:schacon/rack.git rack</div></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> git </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[learn_git]]></title>
-      <url>/2017/07/01/learn-git/</url>
-      <content type="html"><![CDATA[<h2 id="git-path的用法"><a href="#git-path的用法" class="headerlink" title="git path的用法"></a>git path的用法</h2><h2 id="git-配置冲突合并工具KDiff3"><a href="#git-配置冲突合并工具KDiff3" class="headerlink" title="git 配置冲突合并工具KDiff3"></a>git 配置冲突合并工具KDiff3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global --add diff.guitool kdiff3</div><div class="line">git config --global --add difftool.kdiff3.path &quot;/Applications/kdiff3.app/Contents/MacOS/kdiff3&quot;</div><div class="line">git config --global --add difftool.kdiff3.trustExitCode false</div></pre></td></tr></table></figure>
-<p><a href="https://sourceforge.net/projects/kdiff3/files/latest/download?source=typ_redirect" target="_blank" rel="external">KDiff3下载地址</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hexo常用命令总结]]></title>
-      <url>/2017/07/01/article-title/</url>
-      <content type="html"><![CDATA[<h3 id="新写一篇blog"><a href="#新写一篇blog" class="headerlink" title="新写一篇blog:"></a>新写一篇blog:</h3><pre><code>hexo new post &quot;article-tile&quot;
-这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md
-</code></pre><h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><pre><code>hexo g
-</code></pre><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><pre><code>hexo d
-</code></pre><blockquote>
-<p>上面的两个命令可以组合成一个 </p>
-</blockquote>
-<p>​    还可以使用组合命令：hexo g -d</p>
-<hr>
-<p>以上内容是生成和发布博客的一般流程，下面我记录一下我的github + hexo搭建流程供有需要的人参考和学习</p>
-<ul>
-<li><p>申请github</p>
-<ul>
-<li>这个就不多说了</li>
-<li>建立github.io 这个自己可以百度一下教程</li>
-</ul>
-</li>
-<li><p>搭建hexo</p>
-<ul>
-<li><a href="https://hexo.io/docs/" target="_blank" rel="external">!官网</a> :有详细的使用说明，本教程就是说明一下其中常用的</li>
-<li>安装Node.js<ul>
-<li><code>$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash</code></li>
-<li>nvm install stable</li>
-</ul>
-</li>
-<li>安装hexo<ul>
-<li>npm install -g hexo-cli</li>
-<li>hexo init <folder></folder></li>
-<li>cd <folder></folder></li>
-<li>npm install</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>安装主题</p>
-<ul>
-<li><p><strong>Yilia</strong></p>
-</li>
-<li><p><a href="http://theme-next.iissnan.com" target="_blank" rel="external"><strong>NexT</strong></a></p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些都有相关的教程可以去github上搜索，然后看教程配置使用</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[python之pyc文件]]></title>
+    <url>%2F2017%2F08%2F10%2Fpython%E4%B9%8Bpyc%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[简述Python的运行过程 ​ 在说这个问题之前，先了解两个概念，PyCodeObject和pyc文件。我们在硬盘上看到的pyc是PyCodeObject序列化后的文件。当python程序运行时，编译的结果则是保存在位于内存中的PyCodeObject中，当Python程序运行结束时，Python解释器将PyCodeObject写回到pyc文件中。当python程序第二次运行的时候，首先程序会在硬盘中寻找pyc文件，如果找到，则直接载入，否则就重复上面的过程。所以我们应该这样定位PyCodeObject和pyc文件，pyc文件其实是PyCodeObject的一种持久化保存方式。 pyc的目的是重用 pyc的过期时间 每次pyc载入内存中之前会先检查一下py文件和pyc文件保存的最后修改日期，如果不一致则重新生成一份pyc文件 扩展阅读：运行Python脚本时生成的pycache文件夹]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python编程命名规范]]></title>
+    <url>%2F2017%2F08%2F10%2Fpython%E7%BC%96%E7%A8%8B%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%2F</url>
+    <content type="text"><![CDATA[项目名 12首字母大写，其余小写单词，若多个单词组合可以添加“_” 下划线增加可读性Ui_test ​ 包名、模块名 12全部小写字母package、module ​123 首字母大写，其它字母小写，若多个单词时，使用驼峰命名法，UserLoginclass Login:​ 方法名 ​123小写单词，多个单词时，用下划线分割单词以增加可读性def user_login()​ 参数名 ​12345小写单词def user_login(self)如果函数的参数名与保留关键字冲突，在参数名前面加一个下划线，比用缩写、错误的拼写要好因此&quot;_print&quot; 比”&quot;prnt&quot;好​ 普通变量名 ​1234567891011小写字母，单词之间用_分割或者遵守驼峰原则命名month_pay = 2000monthPay = 2000注意：1. 不论是类成员变量还是全局变量，均不是用m 或 g 前缀2. 私有类成员变量使用单一下划线前缀标识，多定义公开成员，少定义私有成员3. 变量名不应该带有类型信息，因为Python是动态类型语言。如iValue、names_list、dict_obj等都是不好的命名4. 开头，结尾，一般为python的自由变量，不要以这种方式命名5. 以__开头(2个下划线)，是私有实例变量​ 7. 常量 ​12常量定义全部为大写，必要的时可用下划线分割单词以增加可读性​]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python 类库引入机制]]></title>
+    <url>%2F2017%2F08%2F09%2Fpython-import%2F</url>
+    <content type="text"><![CDATA[Python 的两种引入机制 121. relative import2. absolute import relative import 1234relative import 也叫作相对引入，在python2.5及以前是默认的引入方法。from .string import afrom ..string import afrom ...string import a ​]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[找房爬虫]]></title>
+    <url>%2F2017%2F08%2F09%2F%E6%89%BE%E6%88%BF%E7%88%AC%E8%99%AB%2F</url>
+    <content type="text"><![CDATA[scrapy 库介绍 1scrapy 是一个为了爬取网站数据，提取结构性数据而编写的应用框架]]></content>
+      <tags>
+        <tag>python,爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mac 下给pip换源]]></title>
+    <url>%2F2017%2F08%2F09%2F%E7%BB%99pip%E6%8D%A2%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[在终端进入目录：cd ~/ 如果没有 .pip 文件夹，那么就新建这个文件夹，mkdir .pip 然后在 .pip 文件夹内新建一个文件 touch pip.conf 编辑pip.conf 文件，写入第三方源 12345678阿里云： [global] index-url = http://mirrors.aliyun.com/pypi/simple/ [install] trusted-host=mirrors.aliyun.com 12345678豆瓣： [global] index-url = http://pypi.douban.com/simple [install] trusted-host=pypi.douban.com 1234清华： [global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple]]></content>
+      <tags>
+        <tag>pip,mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pass密码保存工具]]></title>
+    <url>%2F2017%2F08%2F05%2Fpass%E5%AF%86%E7%A0%81%E4%BF%9D%E5%AD%98%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[安装 1mac 系统：brew install pass 生成GPG密匙对 12gpg --gen-key注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可 初始化密码存储 1pass init s_abcabc@126.com 查看密码目录树 12345pass或pass ls或pass show 插入一个新密码 123pass insert &lt;密码路径&gt;例子：保存邮箱密码pass insert eMail/s_abcabc@126.com 显示已有密码 12345pass show &lt;密码路径&gt;例子：pass show eMail/s_abcabc@126.com会弹出一个对话框让你输入pass的密码输入完成后将会在终端显示s_abcabc@126.com邮箱的密码 生成密码 1234Generate new password zx2c4@laptop ~ $ pass generate Email/jasondonenfeld.com 15 The generated password to Email/jasondonenfeld.com is: $(-QF&amp;Q=IN2nFBx copy密码 1234Copy existing password to clipboard zx2c4@laptop ~ $ pass -c Email/zx2c4.com Copied Email/jason@zx2c4.com to clipboard. Will clear in 45 sec- onds.]]></content>
+      <tags>
+        <tag>pass、密码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pythonStudy]]></title>
+    <url>%2F2017%2F08%2F04%2FpythonStudy%2F</url>
+    <content type="text"><![CDATA[Python 中from… import 与 import…. as的区别 from… import ​ 如 from A import b,相当于 ​ import A ​ b = A.b ​ 再如： ​ “from t2 import var1” 相当于： ​ import t2 ​ var1 = t2.var1 ​ 在此过程中有一个隐含的赋值的过程 ​ import… as ​ import A as B，给予A库一个B的别称，帮助记忆。 pyCharm 当中使用VirtualEnv python 类 1type() :判断对象的类型]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[fastJson将javabean转为Map]]></title>
+    <url>%2F2017%2F07%2F10%2Fjson%2F</url>
+    <content type="text"><![CDATA[问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？ ​ 1234567891011答： Person person = new Person(); person.setUserName(&quot;盛艳明&quot;); person.setAge(27); //将javabean转为map Map map = JSON.toJSON(person); System.out.println(map.toString());]]></content>
+      <tags>
+        <tag>json</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常用网址]]></title>
+    <url>%2F2017%2F07%2F08%2F%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80%2F</url>
+    <content type="text"><![CDATA[vim 常用网址VimAwesome 很方便查找各种vim常用插件]]></content>
+      <tags>
+        <tag>常用网址统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[html5_study]]></title>
+    <url>%2F2017%2F07%2F06%2Fhtml5-study%2F</url>
+    <content type="text"><![CDATA[HTML 5 全局 contenteditable 属性 为了写一个富文本编辑器上个周末和这个周一真的很累，本来想着用一个开源大神写的richEdit来实现发现还是有很多局限性的，richedit 就是使用了html 5的一个global 属性contenteditable属性让div具有了可编辑内容的效果，但是如果我想在div中添加一个图片，图片点击后右上角会出现一个删除按钮这样稍微复杂一些的操作就不行了，因为这个属性是让div里面包含的所有的子元素都可以编辑。 我认为的知识点 html dom tagName 属性 ​ 定义和用法 tagName 属性返回元素的标签名。 在 HTML 中，tagName 属性的返回值始终是大写的。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[gitsubnodule的使用]]></title>
+    <url>%2F2017%2F07%2F02%2Fgitsubnodule%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[git 仓库中添加子仓库 git submodule add &lt;子module的远程仓库地址&gt; git 删除子仓库 Delete the relevant section from the .gitmodules file. Stage the .gitmodules changes git add .gitmodules. Delete the relevant section from .git/config . Run git rm –cached path_to_submodule (no trailing slash). Run rm -rf .git/modules/path_to_submodule. 问题记录：问题一： 重新add子module的时候提示： ‘repo’ already exists in the index 解决办法： 123456789$ rm -Rf rack/$ git submodule add git@github.com:schacon/rack.git rack&apos;rack&apos; already exists in the indexYou have to unstage the rack directory first. Then you can add the submodule:$ git rm -r rack$ git submodule add git@github.com:schacon/rack.git rack]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[learn_git]]></title>
+    <url>%2F2017%2F07%2F01%2Flearn-git%2F</url>
+    <content type="text"><![CDATA[git path的用法git 配置冲突合并工具KDiff3123git config --global --add diff.guitool kdiff3git config --global --add difftool.kdiff3.path &quot;/Applications/kdiff3.app/Contents/MacOS/kdiff3&quot;git config --global --add difftool.kdiff3.trustExitCode false KDiff3下载地址]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo常用命令总结]]></title>
+    <url>%2F2017%2F07%2F01%2Farticle-title%2F</url>
+    <content type="text"><![CDATA[新写一篇blog:hexo new post &quot;article-tile&quot; 这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md 生成hexo g 部署hexo d 上面的两个命令可以组合成一个 ​ 还可以使用组合命令：hexo g -d 以上内容是生成和发布博客的一般流程，下面我记录一下我的github + hexo搭建流程供有需要的人参考和学习 申请github 这个就不多说了 建立github.io 这个自己可以百度一下教程 搭建hexo !官网 :有详细的使用说明，本教程就是说明一下其中常用的 安装Node.js $ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash nvm install stable 安装hexo npm install -g hexo-cli hexo init cd npm install 安装主题 Yilia NexT 1这些都有相关的教程可以去github上搜索，然后看教程配置使用 ​]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
 </search>
