@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-09T08:42:15.000Z</updated>
+  <updated>2017-08-10T03:40:17.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python编程命名规范</title>
+    <link href="http://yoursite.com/2017/08/10/python%E7%BC%96%E7%A8%8B%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"/>
+    <id>http://yoursite.com/2017/08/10/python编程命名规范/</id>
+    <published>2017-08-10T03:15:27.000Z</published>
+    <updated>2017-08-10T03:40:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li><p>项目名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">首字母大写，其余小写单词，若多个单词组合可以添加“_” 下划线增加可读性</div><div class="line">Ui_test</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>包名、模块名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">全部小写字母</div><div class="line">package、module</div></pre></td></tr></table></figure>
+<ol>
+<li>类名</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">首字母大写，其它字母小写，若多个单词时，使用驼峰命名法，UserLogin</div><div class="line">class Login:</div></pre></td></tr></table></figure>
+<ol>
+<li>方法名</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">小写单词，多个单词时，用下划线分割单词以增加可读性</div><div class="line">def user_login()</div></pre></td></tr></table></figure>
+<ol>
+<li>参数名</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">小写单词</div><div class="line">def user_login(self)</div><div class="line">如果函数的参数名与保留关键字冲突，在参数名前面加一个下划线，比用缩写、错误的拼写要好</div><div class="line">因此&quot;_print&quot; 比”&quot;prnt&quot;好</div></pre></td></tr></table></figure>
+<ol>
+<li>普通变量名</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">小写字母，单词之间用_分割或者遵守驼峰原则命名</div><div class="line">month_pay = 2000</div><div class="line">monthPay = 2000</div><div class="line"></div><div class="line">注意：</div><div class="line">1. 不论是类成员变量还是全局变量，均不是用m 或 g 前缀</div><div class="line">2. 私有类成员变量使用单一下划线前缀标识，多定义公开成员，少定义私有成员</div><div class="line">3. 变量名不应该带有类型信息，因为Python是动态类型语言。如iValue、names_list、dict_obj等都是不好的命名</div><div class="line">4. 开头，结尾，一般为python的自由变量，不要以这种方式命名</div><div class="line">5. 以__开头(2个下划线)，是私有实例变量</div></pre></td></tr></table></figure>
+<ol>
+<li>常量</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">常量定义全部为大写，必要的时可用下划线分割单词以增加可读性</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;项目名&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/p
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python 类库引入机制</title>
@@ -168,7 +218,7 @@
     <link href="http://yoursite.com/2017/08/04/pythonStudy/"/>
     <id>http://yoursite.com/2017/08/04/pythonStudy/</id>
     <published>2017-08-04T07:38:43.000Z</published>
-    <updated>2017-08-09T08:42:06.000Z</updated>
+    <updated>2017-08-10T01:36:09.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Python-中from…-import-与-import…-as的区别"><a href="#Python-中from…-import-与-import…-as的区别" class="headerlink" title="Python 中from… import 与 import…. as的区别"></a>Python 中from… import 与 import…. as的区别</h3><blockquote>
 <p>from… import</p>
@@ -185,6 +235,11 @@
 <p>​    import A as B，给予A库一个B的别称，帮助记忆。</p>
 <blockquote>
 <h3 id="pyCharm-当中使用VirtualEnv"><a href="#pyCharm-当中使用VirtualEnv" class="headerlink" title="pyCharm 当中使用VirtualEnv"></a><a href="http://blog.csdn.net/u012104256/article/details/53471836" target="_blank" rel="external">pyCharm 当中使用VirtualEnv</a></h3></blockquote>
+<hr>
+<blockquote>
+<p>python 类</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">type() :判断对象的类型</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
