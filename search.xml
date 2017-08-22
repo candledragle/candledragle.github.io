@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[github收藏]]></title>
+    <url>%2F2017%2F08%2F22%2Fgithub%E6%94%B6%E8%97%8F%2F</url>
+    <content type="text"><![CDATA[React-NativeReact-Native-Apps]]></content>
+      <tags>
+        <tag>github、开源学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python之pyc文件]]></title>
     <url>%2F2017%2F08%2F10%2Fpython%E4%B9%8Bpyc%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[简述Python的运行过程 ​ 在说这个问题之前，先了解两个概念，PyCodeObject和pyc文件。我们在硬盘上看到的pyc是PyCodeObject序列化后的文件。当python程序运行时，编译的结果则是保存在位于内存中的PyCodeObject中，当Python程序运行结束时，Python解释器将PyCodeObject写回到pyc文件中。当python程序第二次运行的时候，首先程序会在硬盘中寻找pyc文件，如果找到，则直接载入，否则就重复上面的过程。所以我们应该这样定位PyCodeObject和pyc文件，pyc文件其实是PyCodeObject的一种持久化保存方式。 pyc的目的是重用 pyc的过期时间 每次pyc载入内存中之前会先检查一下py文件和pyc文件保存的最后修改日期，如果不一致则重新生成一份pyc文件 扩展阅读：运行Python脚本时生成的pycache文件夹]]></content>
