@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-22T01:47:18.000Z</updated>
+  <updated>2017-08-29T06:18:38.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker</title>
+    <link href="http://yoursite.com/2017/08/28/docker/"/>
+    <id>http://yoursite.com/2017/08/28/docker/</id>
+    <published>2017-08-28T15:26:17.000Z</published>
+    <updated>2017-08-29T06:18:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>docker 安装</p>
+<p>docker 换阿里云源</p>
+<p>docker 常用命令</p>
+<p>docker 给debian换源</p>
+<p>docker 给没有安装vim的机器安装vim过程</p>
+<p>docker commit 的使用实例</p>
+<p>docker build的使用实例</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;docker 安装&lt;/p&gt;
+&lt;p&gt;docker 换阿里云源&lt;/p&gt;
+&lt;p&gt;docker 常用命令&lt;/p&gt;
+&lt;p&gt;docker 给debian换源&lt;/p&gt;
+&lt;p&gt;docker 给没有安装vim的机器安装vim过程&lt;/p&gt;
+&lt;p&gt;docker comm
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://yoursite.com/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>github收藏</title>

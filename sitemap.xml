@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/08/28/docker/</loc>
+    
+    <lastmod>2017-08-29T06:18:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/08/22/github%E6%94%B6%E8%97%8F/</loc>
     
     <lastmod>2017-08-22T01:47:18.000Z</lastmod>
