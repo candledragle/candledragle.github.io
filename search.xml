@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[charalsTools-MappingRemote]]></title>
+    <url>%2F2017%2F09%2F08%2FcharalsTools-MappingRemote%2F</url>
+    <content type="text"><![CDATA[问题场景： ​ 我们app调试的时候为了方便写自测数据，可以使用charals的Mapping Remote的工具来帮我们重定向这样我们就可以使用本机搭建的web测试环境来返回我们想要的自测数据了。 charals — tools — Mapping Remote 设置如下图：]]></content>
+      <tags>
+        <tag>charals</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[docker]]></title>
     <url>%2F2017%2F08%2F28%2Fdocker%2F</url>
     <content type="text"><![CDATA[docker 安装 docker 换阿里云源 docker 常用命令 docker 给debian换源 docker 给没有安装vim的机器安装vim过程 docker commit 的使用实例 docker build的使用实例]]></content>

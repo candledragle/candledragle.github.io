@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-29T06:18:38.000Z</updated>
+  <updated>2017-09-08T04:05:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>charalsTools-MappingRemote</title>
+    <link href="http://yoursite.com/2017/09/08/charalsTools-MappingRemote/"/>
+    <id>http://yoursite.com/2017/09/08/charalsTools-MappingRemote/</id>
+    <published>2017-09-08T03:51:23.000Z</published>
+    <updated>2017-09-08T04:05:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题场景：</p>
+<p>​    我们app调试的时候为了方便写自测数据，可以使用charals的Mapping Remote的工具来帮我们重定向这样我们就可以使用本机搭建的web测试环境来返回我们想要的自测数据了。</p>
+<p>charals  — tools — Mapping Remote</p>
+<p>设置如下图：</p>
+<p><img src="/2017/09/08/charalsTools-MappingRemote/Snip20170908_1.png" alt="image"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;问题场景：&lt;/p&gt;
+&lt;p&gt;​    我们app调试的时候为了方便写自测数据，可以使用charals的Mapping Remote的工具来帮我们重定向这样我们就可以使用本机搭建的web测试环境来返回我们想要的自测数据了。&lt;/p&gt;
+&lt;p&gt;charals  — tools — M
+    
+    </summary>
+    
+    
+      <category term="charals" scheme="http://yoursite.com/tags/charals/"/>
+    
+  </entry>
   
   <entry>
     <title>docker</title>
