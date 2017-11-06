@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="listView、EditText," />
 
 
 
@@ -95,16 +95,17 @@
 
 
 
-<meta name="description" content="Python 中from… import 与 import…. as的区别 from… import  ​    如 from A import b,相当于 ​    import A ​    b = A.b ​    再如： ​    “from t2 import var1” 相当于： ​    import t2 ​    var1 = t2.var1 ​    在此过程中有一个隐含的赋值">
+<meta name="description" content="问题：ListView 嵌套EditText, EditText无法获取焦点问题 关注点：android:descendantFocusability 参考资料 12345&amp;lt;ListView     android:id=&amp;quot;@+id/listView&amp;quot;     android:descendantFocusability=&amp;quot;afterDescendants&amp;qu">
+<meta name="keywords" content="listView、EditText">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pythonStudy">
-<meta property="og:url" content="http://yoursite.com/2017/08/04/pythonStudy/index.html">
+<meta property="og:title" content="ListView和EditText解决方案">
+<meta property="og:url" content="http://yoursite.com/2017/11/06/ListView和EditText解决方案/index.html">
 <meta property="og:site_name" content="盛艳明的博客">
-<meta property="og:description" content="Python 中from… import 与 import…. as的区别 from… import  ​    如 from A import b,相当于 ​    import A ​    b = A.b ​    再如： ​    “from t2 import var1” 相当于： ​    import t2 ​    var1 = t2.var1 ​    在此过程中有一个隐含的赋值">
-<meta property="og:updated_time" content="2017-08-10T01:36:09.000Z">
+<meta property="og:description" content="问题：ListView 嵌套EditText, EditText无法获取焦点问题 关注点：android:descendantFocusability 参考资料 12345&amp;lt;ListView     android:id=&amp;quot;@+id/listView&amp;quot;     android:descendantFocusability=&amp;quot;afterDescendants&amp;qu">
+<meta property="og:updated_time" content="2017-11-06T03:49:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pythonStudy">
-<meta name="twitter:description" content="Python 中from… import 与 import…. as的区别 from… import  ​    如 from A import b,相当于 ​    import A ​    b = A.b ​    再如： ​    “from t2 import var1” 相当于： ​    import t2 ​    var1 = t2.var1 ​    在此过程中有一个隐含的赋值">
+<meta name="twitter:title" content="ListView和EditText解决方案">
+<meta name="twitter:description" content="问题：ListView 嵌套EditText, EditText无法获取焦点问题 关注点：android:descendantFocusability 参考资料 12345&amp;lt;ListView     android:id=&amp;quot;@+id/listView&amp;quot;     android:descendantFocusability=&amp;quot;afterDescendants&amp;qu">
 
 
 
@@ -132,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/04/pythonStudy/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/06/ListView和EditText解决方案/"/>
 
 
 
 
 
-  <title>pythonStudy | 盛艳明的博客</title>
+  <title>ListView和EditText解决方案 | 盛艳明的博客</title>
   
 
 
@@ -291,7 +292,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/04/pythonStudy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/ListView和EditText解决方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="盛艳明">
@@ -308,7 +309,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">pythonStudy</h2>
+          <h2 class="post-title" itemprop="name headline">ListView和EditText解决方案</h2>
         
 
         <div class="post-meta">
@@ -320,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-04T15:38:43+08:00">
-                2017-08-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-06T11:45:46+08:00">
+                2017-11-06
               </time>
             
 
@@ -340,8 +341,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/08/04/pythonStudy/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/08/04/pythonStudy/" itemprop="commentsCount"></span>
+                <a href="/2017/11/06/ListView和EditText解决方案/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/11/06/ListView和EditText解决方案/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -371,27 +372,9 @@
       
 
       
-        <h3 id="Python-中from…-import-与-import…-as的区别"><a href="#Python-中from…-import-与-import…-as的区别" class="headerlink" title="Python 中from… import 与 import…. as的区别"></a>Python 中from… import 与 import…. as的区别</h3><blockquote>
-<p>from… import</p>
-</blockquote>
-<p>​    如 from A import b,相当于</p>
-<p>​    import A</p>
-<p>​    b = A.b</p>
-<p>​    再如：</p>
-<p>​    “from t2 import var1” 相当于：</p>
-<p>​    import t2</p>
-<p>​    var1 = t2.var1</p>
-<p>​    在此过程中有一个隐含的赋值的过程</p>
-<p>​    import… as</p>
-<p>​    import A as B，给予A库一个B的别称，帮助记忆。</p>
-<blockquote>
-<h3 id="pyCharm-当中使用VirtualEnv"><a href="#pyCharm-当中使用VirtualEnv" class="headerlink" title="pyCharm 当中使用VirtualEnv"></a><a href="http://blog.csdn.net/u012104256/article/details/53471836" target="_blank" rel="external">pyCharm 当中使用VirtualEnv</a></h3></blockquote>
-<hr>
-<blockquote>
-<p>python 类</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">type() :判断对象的类型</div></pre></td></tr></table></figure>
-
+        <p>问题：ListView 嵌套EditText, EditText无法获取焦点问题</p>
+<p>关注点：android:descendantFocusability <a href="http://www.cnblogs.com/eyu8874521/archive/2012/10/17/2727882.html" target="_blank" rel="external">参考资料</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ListView</div><div class="line">     android:id=&quot;@+id/listView&quot;</div><div class="line">     android:descendantFocusability=&quot;afterDescendants&quot;</div><div class="line">     android:layout_width=&quot;match_parent&quot;</div><div class="line">     android:layout_height=&quot;match_parent&quot; /&gt;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -423,6 +406,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/listView、EditText/" rel="tag"># listView、EditText</a>
+          
+        </div>
+      
 
       
       
@@ -432,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/10/json/" rel="next" title="fastJson将javabean转为Map">
-                <i class="fa fa-chevron-left"></i> fastJson将javabean转为Map
+              <a href="/2017/10/27/Git常用命令/" rel="next" title="Git常用命令">
+                <i class="fa fa-chevron-left"></i> Git常用命令
               </a>
             
           </div>
@@ -441,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/05/pass密码保存工具/" rel="prev" title="pass密码保存工具">
-                pass密码保存工具 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -516,17 +501,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/8554586?v=3&u=b3cd0e63e7981b15dc2ec26879b5554e7d6af83c&s=400"
@@ -606,22 +582,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-中from…-import-与-import…-as的区别"><span class="nav-number">1.</span> <span class="nav-text">Python 中from… import 与 import…. as的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pyCharm-当中使用VirtualEnv"><span class="nav-number">2.</span> <span class="nav-text">pyCharm 当中使用VirtualEnv</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
