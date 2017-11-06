@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[listView和RadioButton的故事]]></title>
+    <url>%2F2017%2F11%2F06%2FlistView%E5%92%8CRadioButton%E7%9A%84%E6%95%85%E4%BA%8B%2F</url>
+    <content type="text"><![CDATA[问题描述：在xml布局中为RadioButton设置默认选中12345678910111213141516171819202122232425&lt;RadioGroup android:id=&quot;@+id/rg&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;wrap_content&quot; android:layout_weight=&quot;60&quot; android:orientation=&quot;horizontal&quot; android:paddingLeft=&quot;20dp&quot;&gt; &lt;RadioButton android:id=&quot;@+id/yes_rb&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;是&quot; android:textColor=&quot;@android:color/black&quot; /&gt; &lt;RadioButton android:id=&quot;@+id/no_rb&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;match_parent&quot; android:layout_marginLeft=&quot;10dp&quot; android:checked=&quot;true&quot; android:text=&quot;否&quot; android:textColor=&quot;@android:color/black&quot; /&gt;&lt;/RadioGroup&gt; 发现在ListView 初始化以后id 为no_rb的RadioButon无法取消掉，原因不明。 解决办法：在代码中设置默认选中， RadioButton rb = (RadioButton) view.findViewById(R.id.no_rb); rb.setChecked(true);]]></content>
+      <tags>
+        <tag>listView、RadioButton</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ListView和EditText解决方案]]></title>
     <url>%2F2017%2F11%2F06%2FListView%E5%92%8CEditText%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
     <content type="text"><![CDATA[问题：ListView 嵌套EditText, EditText无法获取焦点问题 关注点：android:descendantFocusability 参考资料 12345&lt;ListView android:id=&quot;@+id/listView&quot; android:descendantFocusability=&quot;afterDescendants&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; /&gt;]]></content>
