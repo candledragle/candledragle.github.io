@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-06T13:03:16.000Z</updated>
+  <updated>2017-11-19T03:37:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android爬坑记录</title>
+    <link href="http://yoursite.com/2017/11/19/Android%E7%88%AC%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2017/11/19/Android爬坑记录/</id>
+    <published>2017-11-19T03:21:30.000Z</published>
+    <updated>2017-11-19T03:37:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在开发过程中遇到这么一个需求：<br>需要一个可折叠的列表并且在子列表中有EditText的输入和回显的交互</p>
+<p>可折叠的列表很自然的就想到了google的原生控件ExpandableListView<br>但是知道为什么ExpanableListView好像并不怎么友好，在使用过程中发现好多不可思议的地方比如说getChildView会刷两次。好了闲话不多说，问题要逐一解决，先来谈谈解决ExpandListView和EditView的问题。</p>
+<p>思路一：<br>为EditView设置内容监听</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">holder.label_et.addTextChangedListener(new TextWatcher() &#123;</div><div class="line">                @Override</div><div class="line">                public void beforeTextChanged(CharSequence s, int start, int count, int after) &#123;</div><div class="line">                    </div><div class="line">                &#125;</div><div class="line"></div><div class="line">                @Override</div><div class="line">                public void onTextChanged(CharSequence s, int start, int before, int count) &#123;</div><div class="line"></div><div class="line">                &#125;</div><div class="line"></div><div class="line">                @Override</div><div class="line">                public void afterTextChanged(Editable s) &#123;</div><div class="line">                    String text = holder.label_et.getText().toString();</div><div class="line">                    if(!TextUtils.isEmpty(text))&#123;</div><div class="line">                        item.setLable(text);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;);</div></pre></td></tr></table></figure>
+<p>发现问题很诡异，afterTextChanged 被执行了很多遍，最后失败告终。<br>看日志感觉解释不清楚就先不贴了，有时间研究下。</p>
+<p>思路二：在EditText焦点发生变化的时候再获取文本内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">holder.label_et.setOnFocusChangeListener(new View.OnFocusChangeListener() &#123;</div><div class="line">               @Override</div><div class="line">               public void onFocusChange(View v, boolean hasFocus) &#123;</div><div class="line">                   if(!hasFocus)&#123;</div><div class="line">                       String text = holder.label_et.getText().toString();</div><div class="line">                       if(!TextUtils.isEmpty(text))&#123;</div><div class="line">                           item.setLable(text);</div><div class="line">                       &#125;</div><div class="line">                   &#125;</div><div class="line">               &#125;</div><div class="line">           &#125;);</div></pre></td></tr></table></figure>
+<p>完美解决。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在开发过程中遇到这么一个需求：&lt;br&gt;需要一个可折叠的列表并且在子列表中有EditText的输入和回显的交互&lt;/p&gt;
+&lt;p&gt;可折叠的列表很自然的就想到了google的原生控件ExpandableListView&lt;br&gt;但是知道为什么ExpanableListView好像并不
+    
+    </summary>
+    
+    
+      <category term="android、ExpandableListView、EditText" scheme="http://yoursite.com/tags/android%E3%80%81ExpandableListView%E3%80%81EditText/"/>
+    
+  </entry>
   
   <entry>
     <title>listView和RadioButton的故事</title>
@@ -93,13 +122,15 @@
     <link href="http://yoursite.com/2017/09/26/git%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/09/26/git问题记录/</id>
     <published>2017-09-26T08:51:34.000Z</published>
-    <updated>2017-10-27T11:00:18.000Z</updated>
+    <updated>2017-11-19T03:20:47.000Z</updated>
     
     <content type="html"><![CDATA[<p>​    </p>
 <p>​    问题：</p>
 <p>​    error: src refspec feature_elevator does not match any.<br>error: failed to push some refs to ‘git@git.iqdnet.cn:qdp/qdp-guanjia-android.git’    </p>
 <p>解决：</p>
-<p>​     git push origin HEAD:feature_elevator</p>
+<p>​     git push origin HEAD:feature_elevator<br>​     </p>
+<p>问题：<br>git checkout commitId 后会创建一个临时分支比如(HEAD detached at 4eb6b46e)如果修改了内容是不能commit的，如果想commit怎么办呢</p>
+<p>解决：可以通过 git branch [分支名字] [commitId] 创建一个新的分支然后在新的分支上commit在merge到主分支上。</p>
 ]]></content>
     
     <summary type="html">
@@ -618,72 +649,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo常用命令总结</title>
-    <link href="http://yoursite.com/2017/07/01/article-title/"/>
-    <id>http://yoursite.com/2017/07/01/article-title/</id>
-    <published>2017-07-01T01:43:15.000Z</published>
-    <updated>2017-07-01T02:44:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="新写一篇blog"><a href="#新写一篇blog" class="headerlink" title="新写一篇blog:"></a>新写一篇blog:</h3><pre><code>hexo new post &quot;article-tile&quot;
-这个时候就可以在hexo根目录下的source\_posts下看到新生成的文件article-title.md
-</code></pre><h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><pre><code>hexo g
-</code></pre><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><pre><code>hexo d
-</code></pre><blockquote>
-<p>上面的两个命令可以组合成一个 </p>
-</blockquote>
-<p>​    还可以使用组合命令：hexo g -d</p>
-<hr>
-<p>以上内容是生成和发布博客的一般流程，下面我记录一下我的github + hexo搭建流程供有需要的人参考和学习</p>
-<ul>
-<li><p>申请github</p>
-<ul>
-<li>这个就不多说了</li>
-<li>建立github.io 这个自己可以百度一下教程</li>
-</ul>
-</li>
-<li><p>搭建hexo</p>
-<ul>
-<li><a href="https://hexo.io/docs/" target="_blank" rel="external">!官网</a> :有详细的使用说明，本教程就是说明一下其中常用的</li>
-<li>安装Node.js<ul>
-<li><code>$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash</code></li>
-<li>nvm install stable</li>
-</ul>
-</li>
-<li>安装hexo<ul>
-<li>npm install -g hexo-cli</li>
-<li>hexo init <folder></folder></li>
-<li>cd <folder></folder></li>
-<li>npm install</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>安装主题</p>
-<ul>
-<li><p><strong>Yilia</strong></p>
-</li>
-<li><p><a href="http://theme-next.iissnan.com" target="_blank" rel="external"><strong>NexT</strong></a></p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些都有相关的教程可以去github上搜索，然后看教程配置使用</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;新写一篇blog&quot;&gt;&lt;a href=&quot;#新写一篇blog&quot; class=&quot;headerlink&quot; title=&quot;新写一篇blog:&quot;&gt;&lt;/a&gt;新写一篇blog:&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;hexo new post &amp;quot;article-tile&amp;quo
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   

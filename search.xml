@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Android爬坑记录]]></title>
+    <url>%2F2017%2F11%2F19%2FAndroid%E7%88%AC%E5%9D%91%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[在开发过程中遇到这么一个需求：需要一个可折叠的列表并且在子列表中有EditText的输入和回显的交互 可折叠的列表很自然的就想到了google的原生控件ExpandableListView但是知道为什么ExpanableListView好像并不怎么友好，在使用过程中发现好多不可思议的地方比如说getChildView会刷两次。好了闲话不多说，问题要逐一解决，先来谈谈解决ExpandListView和EditView的问题。 思路一：为EditView设置内容监听 12345678910111213141516171819holder.label_et.addTextChangedListener(new TextWatcher() &#123; @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) &#123; &#125; @Override public void onTextChanged(CharSequence s, int start, int before, int count) &#123; &#125; @Override public void afterTextChanged(Editable s) &#123; String text = holder.label_et.getText().toString(); if(!TextUtils.isEmpty(text))&#123; item.setLable(text); &#125; &#125; &#125;); 发现问题很诡异，afterTextChanged 被执行了很多遍，最后失败告终。看日志感觉解释不清楚就先不贴了，有时间研究下。 思路二：在EditText焦点发生变化的时候再获取文本内容 1234567891011holder.label_et.setOnFocusChangeListener(new View.OnFocusChangeListener() &#123; @Override public void onFocusChange(View v, boolean hasFocus) &#123; if(!hasFocus)&#123; String text = holder.label_et.getText().toString(); if(!TextUtils.isEmpty(text))&#123; item.setLable(text); &#125; &#125; &#125; &#125;); 完美解决。]]></content>
+      <tags>
+        <tag>android、ExpandableListView、EditText</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[listView和RadioButton的故事]]></title>
     <url>%2F2017%2F11%2F06%2FlistView%E5%92%8CRadioButton%E7%9A%84%E6%95%85%E4%BA%8B%2F</url>
     <content type="text"><![CDATA[问题描述：在xml布局中为RadioButton设置默认选中12345678910111213141516171819202122232425&lt;RadioGroup android:id=&quot;@+id/rg&quot; android:layout_width=&quot;0dp&quot; android:layout_height=&quot;wrap_content&quot; android:layout_weight=&quot;60&quot; android:orientation=&quot;horizontal&quot; android:paddingLeft=&quot;20dp&quot;&gt; &lt;RadioButton android:id=&quot;@+id/yes_rb&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;是&quot; android:textColor=&quot;@android:color/black&quot; /&gt; &lt;RadioButton android:id=&quot;@+id/no_rb&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;match_parent&quot; android:layout_marginLeft=&quot;10dp&quot; android:checked=&quot;true&quot; android:text=&quot;否&quot; android:textColor=&quot;@android:color/black&quot; /&gt;&lt;/RadioGroup&gt; 发现在ListView 初始化以后id 为no_rb的RadioButon无法取消掉，原因不明。 解决办法：在代码中设置默认选中， RadioButton rb = (RadioButton) view.findViewById(R.id.no_rb); rb.setChecked(true);]]></content>
@@ -27,7 +35,7 @@
   <entry>
     <title><![CDATA[git问题记录]]></title>
     <url>%2F2017%2F09%2F26%2Fgit%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[​ ​ 问题： ​ error: src refspec feature_elevator does not match any.error: failed to push some refs to ‘git@git.iqdnet.cn:qdp/qdp-guanjia-android.git’ 解决： ​ git push origin HEAD:feature_elevator]]></content>
+    <content type="text"><![CDATA[​ ​ 问题： ​ error: src refspec feature_elevator does not match any.error: failed to push some refs to ‘git@git.iqdnet.cn:qdp/qdp-guanjia-android.git’ 解决： ​ git push origin HEAD:feature_elevator​ 问题：git checkout commitId 后会创建一个临时分支比如(HEAD detached at 4eb6b46e)如果修改了内容是不能commit的，如果想commit怎么办呢 解决：可以通过 git branch [分支名字] [commitId] 创建一个新的分支然后在新的分支上commit在merge到主分支上。]]></content>
       <tags>
         <tag>git</tag>
       </tags>

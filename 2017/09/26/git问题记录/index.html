@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/26/git问题记录/index.html">
 <meta property="og:site_name" content="盛艳明的博客">
 <meta property="og:description" content="​     ​    问题： ​    error: src refspec feature_elevator does not match any.error: failed to push some refs to ‘git@git.iqdnet.cn:qdp/qdp-guanjia-android.git’     解决： ​     git push origin HEAD:feature">
-<meta property="og:updated_time" content="2017-10-27T11:00:18.000Z">
+<meta property="og:updated_time" content="2017-11-19T03:20:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git问题记录">
 <meta name="twitter:description" content="​     ​    问题： ​    error: src refspec feature_elevator does not match any.error: failed to push some refs to ‘git@git.iqdnet.cn:qdp/qdp-guanjia-android.git’     解决： ​     git push origin HEAD:feature">
@@ -376,7 +376,9 @@
 <p>​    问题：</p>
 <p>​    error: src refspec feature_elevator does not match any.<br>error: failed to push some refs to ‘git@git.iqdnet.cn:qdp/qdp-guanjia-android.git’    </p>
 <p>解决：</p>
-<p>​     git push origin HEAD:feature_elevator</p>
+<p>​     git push origin HEAD:feature_elevator<br>​     </p>
+<p>问题：<br>git checkout commitId 后会创建一个临时分支比如(HEAD detached at 4eb6b46e)如果修改了内容是不能commit的，如果想commit怎么办呢</p>
+<p>解决：可以通过 git branch [分支名字] [commitId] 创建一个新的分支然后在新的分支上commit在merge到主分支上。</p>
 
       
     </div>
@@ -524,7 +526,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -537,7 +539,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/11/19/Android%E7%88%AC%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2017-11-19T03:37:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/09/26/git%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2017-11-19T03:20:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/11/06/listView%E5%92%8CRadioButton%E7%9A%84%E6%95%85%E4%BA%8B/</loc>
     
     <lastmod>2017-11-06T13:03:16.000Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://yoursite.com/2017/10/27/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2017-10-27T11:09:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/09/26/git%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2017-10-27T11:00:18.000Z</lastmod>
     
   </url>
   
