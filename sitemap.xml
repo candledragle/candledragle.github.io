@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/11/22/gdb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2017-11-22T00:11:32.415Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/android/index-1.html</loc>
     
     <lastmod>2017-11-19T04:00:01.000Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://yoursite.com/android/index.html</loc>
     
     <lastmod>2017-08-07T05:47:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2017-08-07T05:44:55.000Z</lastmod>
     
   </url>
   

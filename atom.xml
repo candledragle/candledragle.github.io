@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-19T03:59:12.000Z</updated>
+  <updated>2017-11-22T00:11:32.415Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gdb学习笔记</title>
+    <link href="http://yoursite.com/2017/11/22/gdb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2017/11/22/gdb学习笔记/</id>
+    <published>2017-11-21T23:53:09.000Z</published>
+    <updated>2017-11-22T00:11:32.415Z</updated>
+    
+    <content type="html"><![CDATA[<p>系统环境：mac</p>
+<p>下载安装完gdb后第一步是添加证书否者会出现以下提示</p>
+<pre><code>(please check gdb is codesigned - see taskgated(8))
+</code></pre><p><a href="http://blog.afantree.com/unixlinux/gdb-prompt-signature-under-mac-error-please-check-gdb-is-codesigned-see-taskgated-8.html" target="_blank" rel="external">mac下添加证书连接</a></p>
+<ol>
+<li><p>编译生成可执行的文件（加上-g会生成可调试的文件）</p>
+<pre><code>gcc -g test.c -o test
+
+会多生成一个文件，这个文件在我电脑上的名字是.dSYM
+//todo 查阅资料了解这个文件的作用
+</code></pre></li>
+</ol>
+<p>常用命令：（注：使用enter| 空格键是重复上一个命令）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">l(list) :列出源码</div><div class="line"></div><div class="line">n(next) :单点调试(就是单条语句执行)</div><div class="line"></div><div class="line">p(print):输出你想打印的值</div><div class="line"></div><div class="line">break	 :打断点 例如 break 17表示把断点打在第17行</div><div class="line">info break :查看所有断点的信息</div><div class="line">bt: 查看函数的堆栈信息</div><div class="line">finish:退出函数</div><div class="line">c: 继续运行</div><div class="line">q: 退出gdb</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;系统环境：mac&lt;/p&gt;
+&lt;p&gt;下载安装完gdb后第一步是添加证书否者会出现以下提示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(please check gdb is codesigned - see taskgated(8))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;ht
+    
+    </summary>
+    
+    
+      <category term="gdb" scheme="http://yoursite.com/tags/gdb/"/>
+    
+  </entry>
   
   <entry>
     <title>Android爬坑记录</title>
@@ -629,26 +665,6 @@
     
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>learn_git</title>
-    <link href="http://yoursite.com/2017/07/01/learn-git/"/>
-    <id>http://yoursite.com/2017/07/01/learn-git/</id>
-    <published>2017-07-01T04:24:14.000Z</published>
-    <updated>2017-07-02T13:28:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="git-path的用法"><a href="#git-path的用法" class="headerlink" title="git path的用法"></a>git path的用法</h2><h2 id="git-配置冲突合并工具KDiff3"><a href="#git-配置冲突合并工具KDiff3" class="headerlink" title="git 配置冲突合并工具KDiff3"></a>git 配置冲突合并工具KDiff3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global --add diff.guitool kdiff3</div><div class="line">git config --global --add difftool.kdiff3.path &quot;/Applications/kdiff3.app/Contents/MacOS/kdiff3&quot;</div><div class="line">git config --global --add difftool.kdiff3.trustExitCode false</div></pre></td></tr></table></figure>
-<p><a href="https://sourceforge.net/projects/kdiff3/files/latest/download?source=typ_redirect" target="_blank" rel="external">KDiff3下载地址</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;git-path的用法&quot;&gt;&lt;a href=&quot;#git-path的用法&quot; class=&quot;headerlink&quot; title=&quot;git path的用法&quot;&gt;&lt;/a&gt;git path的用法&lt;/h2&gt;&lt;h2 id=&quot;git-配置冲突合并工具KDiff3&quot;&gt;&lt;a href=&quot;
-    
-    </summary>
-    
     
   </entry>
   
