@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-22T00:11:32.415Z</updated>
+  <updated>2017-11-22T00:12:19.720Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/11/22/gdb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/11/22/gdb学习笔记/</id>
     <published>2017-11-21T23:53:09.000Z</published>
-    <updated>2017-11-22T00:11:32.415Z</updated>
+    <updated>2017-11-22T00:12:19.720Z</updated>
     
     <content type="html"><![CDATA[<p>系统环境：mac</p>
 <p>下载安装完gdb后第一步是添加证书否者会出现以下提示</p>
@@ -46,8 +46,6 @@
     
     </summary>
     
-    
-      <category term="gdb" scheme="http://yoursite.com/tags/gdb/"/>
     
   </entry>
   

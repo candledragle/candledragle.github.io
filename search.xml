@@ -4,9 +4,6 @@
     <title><![CDATA[gdb学习笔记]]></title>
     <url>%2F2017%2F11%2F22%2Fgdb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[系统环境：mac 下载安装完gdb后第一步是添加证书否者会出现以下提示 (please check gdb is codesigned - see taskgated(8)) mac下添加证书连接 编译生成可执行的文件（加上-g会生成可调试的文件） gcc -g test.c -o test 会多生成一个文件，这个文件在我电脑上的名字是.dSYM //todo 查阅资料了解这个文件的作用 常用命令：（注：使用enter| 空格键是重复上一个命令）123456789101112l(list) :列出源码n(next) :单点调试(就是单条语句执行)p(print):输出你想打印的值break :打断点 例如 break 17表示把断点打在第17行info break :查看所有断点的信息bt: 查看函数的堆栈信息finish:退出函数c: 继续运行q: 退出gdb]]></content>
-      <tags>
-        <tag>gdb</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Android爬坑记录]]></title>
