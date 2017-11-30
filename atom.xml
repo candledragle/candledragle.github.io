@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-23T00:44:27.576Z</updated>
+  <updated>2017-11-30T10:39:36.070Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>checkout的单文件合并用法</title>
+    <link href="http://yoursite.com/2017/11/30/checkout%E7%9A%84%E5%8D%95%E6%96%87%E4%BB%B6%E5%90%88%E5%B9%B6%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/11/30/checkout的单文件合并用法/</id>
+    <published>2017-11-30T07:36:51.000Z</published>
+    <updated>2017-11-30T10:39:36.070Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>问题描述</p>
+</blockquote>
+<pre><code>在我们开发过程中特别是分支比较多的时候会遇到一种场景就是需要
+A分支上的某几个文件合并到另一个分支上比如f.java保持多个版本间
+的代码同步，那么怎么办呢?git checkout的命令正好可以用上
+</code></pre><blockquote>
+<p>使用用例</p>
+</blockquote>
+<pre><code>git checkout A 切换到A分支
+git checkout B f.java (将B分支上的f文件强行覆盖|copy到分支)
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;问题描述&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;在我们开发过程中特别是分支比较多的时候会遇到一种场景就是需要
+A分支上的某几个文件合并到另一个分支上比如f.java保持多个版本间
+的代码同步，那么怎么办呢?git checkou
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git分支合并经验总结</title>
+    <link href="http://yoursite.com/2017/11/24/git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/11/24/git分支合并经验总结/</id>
+    <published>2017-11-24T08:59:43.000Z</published>
+    <updated>2017-11-24T08:59:43.146Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>点滴积累c指针</title>
@@ -587,53 +637,6 @@
     
     
       <category term="json" scheme="http://yoursite.com/tags/json/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用网址</title>
-    <link href="http://yoursite.com/2017/07/08/%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80/"/>
-    <id>http://yoursite.com/2017/07/08/常用网址/</id>
-    <published>2017-07-08T04:11:02.000Z</published>
-    <updated>2017-07-08T04:13:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="vim-常用网址"><a href="#vim-常用网址" class="headerlink" title="vim 常用网址"></a>vim 常用网址</h2><p><a href="http://vimawesome.com" target="_blank" rel="external">VimAwesome</a></p>
-<pre><code>很方便查找各种vim常用插件
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;vim-常用网址&quot;&gt;&lt;a href=&quot;#vim-常用网址&quot; class=&quot;headerlink&quot; title=&quot;vim 常用网址&quot;&gt;&lt;/a&gt;vim 常用网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://vimawesome.com&quot; target=&quot;_blank
-    
-    </summary>
-    
-    
-      <category term="常用网址统计" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8%E7%BD%91%E5%9D%80%E7%BB%9F%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html5_study</title>
-    <link href="http://yoursite.com/2017/07/06/html5-study/"/>
-    <id>http://yoursite.com/2017/07/06/html5-study/</id>
-    <published>2017-07-06T01:59:37.000Z</published>
-    <updated>2017-07-11T11:07:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/html5/att_global_contenteditable.asp" target="_blank" rel="external">HTML 5 全局 contenteditable 属性</a></p>
-<p><img src="/2017/07/06/html5-study/html5_01.jpg" alt="说明图片"></p>
-<p>为了写一个富文本编辑器上个周末和这个周一真的很累，本来想着用一个开源大神写的richEdit来实现发现还是有很多局限性的，richedit 就是使用了html 5的一个global 属性contenteditable属性让div具有了可编辑内容的效果，但是如果我想在div中添加一个图片，图片点击后右上角会出现一个删除按钮这样稍微复杂一些的操作就不行了，因为这个属性是让div里面包含的所有的子元素都可以编辑。</p>
-<h2 id="我认为的知识点"><a href="#我认为的知识点" class="headerlink" title="我认为的知识点"></a>我认为的知识点</h2><ol>
-<li>html dom tagName 属性</li>
-</ol>
-<p>​        定义和用法<br>      tagName 属性返回元素的标签名。<br>        在 HTML 中，tagName 属性的返回值始终是<strong>大写</strong>的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.w3school.com.cn/html5/att_global_contenteditable.asp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML 5 全局 contenteditable 属性&lt;/a&gt;
-    
-    </summary>
-    
     
   </entry>
   
