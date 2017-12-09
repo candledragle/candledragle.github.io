@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-30T10:39:36.070Z</updated>
+  <updated>2017-12-09T08:37:39.857Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>巩固java中Collections中sort方法的用法</title>
+    <link href="http://yoursite.com/2017/12/09/%E5%B7%A9%E5%9B%BAjava%E4%B8%ADCollections%E4%B8%ADsort%E6%96%B9%E6%B3%95%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/12/09/巩固java中Collections中sort方法的用法/</id>
+    <published>2017-12-09T08:29:10.000Z</published>
+    <updated>2017-12-09T08:37:39.857Z</updated>
+    
+    <content type="html"><![CDATA[<p>###这里不讲原理了，有兴趣可以追踪java源码</p>
+<p>测试用例一：</p>
+<pre><code>ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+    list.add(1);
+    list.add(3);
+    list.add(4);
+    list.add(2);
+    list.add(7);
+    list.add(6);
+
+Collections.sort(list);
+System.out.println(list)
+
+结论：默认情况下Collections.sort是升序排序
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Comparator&lt;Integer&gt; comparable = new Comparator&lt;Integer&gt;() &#123;</div><div class="line"></div><div class="line"></div><div class="line">     @Override</div><div class="line">     public int compare(Integer l, Integer h) &#123;</div><div class="line">   </div><div class="line">         System.out.println(l+&quot; &quot;+h);</div><div class="line">         if(l &gt; h)&#123;</div><div class="line">             return -1;</div><div class="line">         &#125;else&#123;</div><div class="line">             return 1;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line"> &#125;;</div><div class="line"></div><div class="line"> ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</div><div class="line"> list.add(1);</div><div class="line"> list.add(3);</div><div class="line"> list.add(4);</div><div class="line"> list.add(2);</div><div class="line"> list.add(7);</div><div class="line"> list.add(6);</div><div class="line"></div><div class="line"> System.out.println(list);</div><div class="line"> sort(list,comparable);</div><div class="line"> System.out.println(list);</div></pre></td></tr></table></figure>
+<hr>
+<p> 打印结果</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[1, 3, 4, 2, 7, 6]</div><div class="line">3 1</div><div class="line">4 3</div><div class="line">2 4</div><div class="line">2 3</div><div class="line">2 1</div><div class="line">7 2</div><div class="line">7 3</div><div class="line">7 4</div><div class="line">6 3</div><div class="line">6 4</div><div class="line">6 7</div><div class="line">[7, 6, 4, 3, 2, 1]</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###这里不讲原理了，有兴趣可以追踪java源码&lt;/p&gt;
+&lt;p&gt;测试用例一：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;Integer&amp;gt; list = new ArrayList&amp;lt;Integer&amp;gt;();
+    list.add(1);
+  
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>“rsaauthentication”问题</title>
+    <link href="http://yoursite.com/2017/11/30/%E2%80%9Crsaauthentication%E2%80%9D%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/11/30/“rsaauthentication”问题/</id>
+    <published>2017-11-30T11:00:46.000Z</published>
+    <updated>2017-11-30T11:00:46.582Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>checkout的单文件合并用法</title>
@@ -570,73 +627,6 @@ A分支上的某几个文件合并到另一个分支上比如f.java保持多个�
     
     
       <category term="pass、密码" scheme="http://yoursite.com/tags/pass%E3%80%81%E5%AF%86%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pythonStudy</title>
-    <link href="http://yoursite.com/2017/08/04/pythonStudy/"/>
-    <id>http://yoursite.com/2017/08/04/pythonStudy/</id>
-    <published>2017-08-04T07:38:43.000Z</published>
-    <updated>2017-08-10T01:36:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Python-中from…-import-与-import…-as的区别"><a href="#Python-中from…-import-与-import…-as的区别" class="headerlink" title="Python 中from… import 与 import…. as的区别"></a>Python 中from… import 与 import…. as的区别</h3><blockquote>
-<p>from… import</p>
-</blockquote>
-<p>​    如 from A import b,相当于</p>
-<p>​    import A</p>
-<p>​    b = A.b</p>
-<p>​    再如：</p>
-<p>​    “from t2 import var1” 相当于：</p>
-<p>​    import t2</p>
-<p>​    var1 = t2.var1</p>
-<p>​    在此过程中有一个隐含的赋值的过程</p>
-<p>​    import… as</p>
-<p>​    import A as B，给予A库一个B的别称，帮助记忆。</p>
-<blockquote>
-<h3 id="pyCharm-当中使用VirtualEnv"><a href="#pyCharm-当中使用VirtualEnv" class="headerlink" title="pyCharm 当中使用VirtualEnv"></a><a href="http://blog.csdn.net/u012104256/article/details/53471836" target="_blank" rel="external">pyCharm 当中使用VirtualEnv</a></h3></blockquote>
-<hr>
-<blockquote>
-<p>python 类</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">type() :判断对象的类型</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Python-中from…-import-与-import…-as的区别&quot;&gt;&lt;a href=&quot;#Python-中from…-import-与-import…-as的区别&quot; class=&quot;headerlink&quot; title=&quot;Python 中from… import
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>fastJson将javabean转为Map</title>
-    <link href="http://yoursite.com/2017/07/10/json/"/>
-    <id>http://yoursite.com/2017/07/10/json/</id>
-    <published>2017-07-10T10:53:28.000Z</published>
-    <updated>2017-07-10T11:00:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？</p>
-</blockquote>
-<p>​    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">答：	Person person = new  Person();</div><div class="line"></div><div class="line">		person.setUserName(&quot;盛艳明&quot;);</div><div class="line"></div><div class="line">		person.setAge(27);</div><div class="line"></div><div class="line">		//将javabean转为map</div><div class="line"></div><div class="line">		Map map = JSON.toJSON(person);</div><div class="line"></div><div class="line">		System.out.println(map.toString());</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;问题：我们有时候希望写的javabean转换为Map方便数据操作，那么我们怎么做呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
-    
-    </summary>
-    
-    
-      <category term="json" scheme="http://yoursite.com/tags/json/"/>
     
   </entry>
   

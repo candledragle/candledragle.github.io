@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[巩固java中Collections中sort方法的用法]]></title>
+    <url>%2F2017%2F12%2F09%2F%E5%B7%A9%E5%9B%BAjava%E4%B8%ADCollections%E4%B8%ADsort%E6%96%B9%E6%B3%95%E7%9A%84%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[###这里不讲原理了，有兴趣可以追踪java源码 测试用例一： ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(); list.add(1); list.add(3); list.add(4); list.add(2); list.add(7); list.add(6); Collections.sort(list); System.out.println(list) 结论：默认情况下Collections.sort是升序排序 123456789101112131415161718192021222324252627Comparator&lt;Integer&gt; comparable = new Comparator&lt;Integer&gt;() &#123; @Override public int compare(Integer l, Integer h) &#123; System.out.println(l+&quot; &quot;+h); if(l &gt; h)&#123; return -1; &#125;else&#123; return 1; &#125; &#125; &#125;; ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(); list.add(1); list.add(3); list.add(4); list.add(2); list.add(7); list.add(6); System.out.println(list); sort(list,comparable); System.out.println(list); 打印结果 12345678910111213[1, 3, 4, 2, 7, 6]3 14 32 42 32 17 27 37 46 36 46 7[7, 6, 4, 3, 2, 1]]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[“rsaauthentication”问题]]></title>
+    <url>%2F2017%2F11%2F30%2F%E2%80%9Crsaauthentication%E2%80%9D%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[checkout的单文件合并用法]]></title>
     <url>%2F2017%2F11%2F30%2Fcheckout%E7%9A%84%E5%8D%95%E6%96%87%E4%BB%B6%E5%90%88%E5%B9%B6%E7%94%A8%E6%B3%95%2F</url>
     <content type="text"><![CDATA[问题描述 在我们开发过程中特别是分支比较多的时候会遇到一种场景就是需要 A分支上的某几个文件合并到另一个分支上比如f.java保持多个版本间 的代码同步，那么怎么办呢?git checkout的命令正好可以用上 使用用例 git checkout A 切换到A分支 git checkout B f.java (将B分支上的f文件强行覆盖|copy到分支)]]></content>
