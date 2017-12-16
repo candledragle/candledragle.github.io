@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-09T08:37:39.857Z</updated>
+  <updated>2017-12-16T03:09:02.930Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c语言生成动态链接库复习</title>
+    <link href="http://yoursite.com/2017/12/16/c%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/12/16/c语言生成动态链接库复习/</id>
+    <published>2017-12-16T03:01:51.000Z</published>
+    <updated>2017-12-16T03:09:02.930Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>命令实例：生成动态链接库</p>
+</blockquote>
+<pre><code>gcc test_a.c test_b.c test_c.c -fPIC -shared -o libtest.so
+</code></pre><blockquote>
+<p>使用动态链接库</p>
+</blockquote>
+<pre><code>gcc test.c -L. -ltest -o test    
+</code></pre><blockquote>
+<p>测试是否动态链接</p>
+</blockquote>
+<pre><code>otool test
+</code></pre><p>–</p>
+<pre><code>1、编译参数解析
+最主要的是GCC命令行的一个选项:
+-shared 该选项指定生成动态连接库（让连接器生成T类型的导出符号表，有时候也生成弱连接W类型的导
+出符号），不用该标志外部程序无法连接。相当于一个可执行文件
+l -fPIC：表示编译为位置独立的代码，不用此选项的话编译后的代码是位置相关的所以动态载入时是通
+过代码拷贝的方式来满足不同进程的需要，而不能达到真正代码段共享的目的。
+l -L.：表示要连接的库在当前目录中
+l -ltest：编译器查找动态连接库时有隐含的命名规则，即在给出的名字前面加上lib，后面加上.so来确
+定库的名称
+l LD_LIBRARY_PATH：这个环境变量指示动态连接器可以装载动态库的路径。
+l 当然如果有root权限的话，可以修改/etc/ld.so.conf文件，然后调用 /sbin/ldconfig来达到同样的目
+的，不过如果没有root权限，那么只能采用输出LD_LIBRARY_PATH的方法了。
+
+2、注意
+调用动态库的时候有几个问题会经常碰到，有时，明明已经将库的头文件所在目录 通过 “-I” include
+进来了，库所在文件通过 “-L”参数引导，并指定了“-l”的库名，但通过ldd命令察看时，就是死活找
+不到你指定链接的so文件，这时你要作的就是通过修改 LD_LIBRARY_PATH或者/etc/ld.so.conf文件来指
+定动态库的目录。通常这样做就可以解决库无法链接的问题了。
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;命令实例：生成动态链接库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;gcc test_a.c test_b.c test_c.c -fPIC -shared -o libtest.so
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquot
+    
+    </summary>
+    
+    
+      <category term="c" scheme="http://yoursite.com/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>巩固java中Collections中sort方法的用法</title>
@@ -572,61 +627,6 @@ A分支上的某几个文件合并到另一个分支上比如f.java保持多个�
     
     
       <category term="pip,mac" scheme="http://yoursite.com/tags/pip-mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pass密码保存工具</title>
-    <link href="http://yoursite.com/2017/08/05/pass%E5%AF%86%E7%A0%81%E4%BF%9D%E5%AD%98%E5%B7%A5%E5%85%B7/"/>
-    <id>http://yoursite.com/2017/08/05/pass密码保存工具/</id>
-    <published>2017-08-05T03:26:38.000Z</published>
-    <updated>2017-08-06T13:49:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>安装</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mac 系统：brew install pass</div></pre></td></tr></table></figure>
-<blockquote>
-<p>生成GPG密匙对 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gpg --gen-key</div><div class="line">注意：运行以上的命令以生成 GPG 密钥对时会有一系列的问题询问，谨慎输入问题的答案，其中有一些只要使用默认值即可</div></pre></td></tr></table></figure>
-<blockquote>
-<p>初始化密码存储 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pass init s_abcabc@126.com</div></pre></td></tr></table></figure>
-<blockquote>
-<p>查看密码目录树 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass</div><div class="line">或</div><div class="line">pass ls</div><div class="line">或</div><div class="line">pass show</div></pre></td></tr></table></figure>
-<blockquote>
-<p>插入一个新密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pass insert &lt;密码路径&gt;</div><div class="line">例子：保存邮箱密码</div><div class="line">pass insert eMail/s_abcabc@126.com</div></pre></td></tr></table></figure>
-<blockquote>
-<p>显示已有密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pass show &lt;密码路径&gt;</div><div class="line">例子：</div><div class="line">pass show eMail/s_abcabc@126.com</div><div class="line">会弹出一个对话框让你输入pass的密码</div><div class="line">输入完成后将会在终端显示s_abcabc@126.com邮箱的密码</div></pre></td></tr></table></figure>
-<blockquote>
-<p>生成密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Generate new password</div><div class="line">      zx2c4@laptop ~ $ pass generate Email/jasondonenfeld.com 15</div><div class="line">      The generated password to Email/jasondonenfeld.com is:</div><div class="line">      $(-QF&amp;Q=IN2nFBx</div></pre></td></tr></table></figure>
-<blockquote>
-<p>copy密码</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Copy existing password to clipboard</div><div class="line">    zx2c4@laptop ~ $ pass -c Email/zx2c4.com</div><div class="line">    Copied Email/jason@zx2c4.com to clipboard. Will clear in 45 sec-</div><div class="line">    onds.</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;安装&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;
-    
-    </summary>
-    
-    
-      <category term="pass、密码" scheme="http://yoursite.com/tags/pass%E3%80%81%E5%AF%86%E7%A0%81/"/>
     
   </entry>
   
